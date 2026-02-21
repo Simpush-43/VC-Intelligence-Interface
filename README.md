@@ -27,7 +27,7 @@ VC Scout is a high-density, Harmonic-style discovery platform designed to transf
 
 > **Note on the "Core Test":** This application strictly adheres to the security requirement of the assignment. The `GEMINI_API_KEY` is never exposed to the client. All scraping and LLM extraction happens securely on the backend via a Vercel Serverless Function (`/api/enrich`).
 
-![App Screenshot Placeholder - Replace with your actual image path like ./screenshot.png](https://placehold.co/800x450/111113/FFFFFF?text=Add+a+Screenshot+Here+Inside+GitHub)
+![App Screenshot ](screenshots/Discovery.png)
 
 ---
 
@@ -57,9 +57,15 @@ VC Scout is a high-density, Harmonic-style discovery platform designed to transf
 ├── api/                # Vercel Serverless Functions (Node.js)
 │   └── enrich.js       # Cheerio Scraper + Gemini AI Integration
 ├── src/
+│   └── assets 
 │   ├── components/     # Reusable UI (GlobalSearch, ErrorBoundary, Sidebar)
-│   ├── contexts/       # Global State (ToastContext)
+│   ├── contexts/  
+│   └── hooks/      
 │   ├── pages/          # React Router Views (Discovery, Profile, Lists)
-│   └── mockData.js     # Seeded JSON dataset
+│   └── App.css
+│   └── App.jsx
+│   └── index.css
+│   └── main.jsx
+│   └── mockData.js    # Seeded JSON dataset
 ├── vercel.json         # Route rewrites for React Router SPA
 └── vite.config.js      # Frontend build configuration
