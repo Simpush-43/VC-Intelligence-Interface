@@ -69,3 +69,21 @@ VC Scout is a high-density, Harmonic-style discovery platform designed to transf
 │   └── mockData.js    # Seeded JSON dataset
 ├── vercel.json         # Route rewrites for React Router SPA
 └── vite.config.js      # Frontend build configuration
+## 💻 Local Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Simpush-43/VC-Intelligence-Interface](https://github.com/Simpush-43/VC-Intelligence-Interface.git)
+   cd vc-scout```
+2. **Install dependencies:**
+   ```npm install```
+3. **Configure Environment Variables:
+Create a .env.local file in the root directory and add your Google AI Studio key:**
+   ```Code snippet
+   GEMINI_API_KEY=your_google_ai_studio_key_here```
+4. **Run the Development Server:
+Because this project uses Vercel Serverless API routes, use the Vercel CLI to run the frontend and backend simultaneously:**
+```bash
+npm i -g vercel
+vercel dev```
+The app will be live at http://localhost:3000.
