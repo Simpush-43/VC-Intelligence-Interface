@@ -3,7 +3,7 @@
   <p><strong>A precision AI scouting interface built for Venture Capital funds.</strong></p>
   
   <p>
-    <a href="https://vc-scout-q0jn4bpqv-simpush-43s-projects.vercel.app/"><strong>🟢 VIEW LIVE DEPLOYMENT</strong></a> · 
+    <a href="https://vc-scout-ka1jp7z9a-simpush-43s-projects.vercel.app/"><strong>🟢 VIEW LIVE DEPLOYMENT</strong></a> · 
     <a href="#-local-setup"><strong>Read the Docs</strong></a>
   </p>
 
