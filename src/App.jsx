@@ -36,7 +36,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Discovery />} />
                   <Route path="/companies" element={<Discovery />} />
-                  <Route path="/profile/:id" element={<Profile />} />
+                  <Route path="/companies/:id" element={<Profile />} />
                   <Route path="/lists" element={<Lists />} />
                   <Route path="/saved-searches" element={<SavedSearches />} />
                   <Route path="*" element={<NotFound />} />

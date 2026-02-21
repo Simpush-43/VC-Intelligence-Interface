@@ -66,7 +66,7 @@ export default function Lists() {
   }
 
   const handleCompanyClick = (company) => {
-    navigate(`/profile/${company.id}`)
+    navigate(`/companies/${company.id}`)
     showToast(`Opening profile for ${company.name}`);
   }
 
