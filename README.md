@@ -1,21 +1,17 @@
 <div align="center">
-  <div p-4>
-    <img src="https://img.icons8.com/fluency/96/000000/radar.png" alt="Radar Icon" width="64" height="64" />
-  </div>
   <h1>🧭 VC Scout Intelligence</h1>
   <p><strong>A precision AI scouting interface built for Venture Capital funds.</strong></p>
   
   <p>
-    <a href="YOUR_VERCEL_LINK_HERE"><strong>View Live Deployment</strong></a> · 
+    <a href="https://vc-scout-q0jn4bpqv-simpush-43s-projects.vercel.app/"><strong>🟢 VIEW LIVE DEPLOYMENT</strong></a> · 
     <a href="#-local-setup"><strong>Read the Docs</strong></a>
   </p>
 
-  <p>
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-    <img src="https://img.shields.io/badge/Tailwind_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
-    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-    <img src="https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini AI" />
+  <p align="center">
+    <img src="screenshots/Discovery.png" alt="Discovery Page" width="48%" />
+    <img src="screenshots/Profile_page.png" alt="AI Enrichment Profile" width="48%" />
+    <img src="screenshots/Analysis_screen.png" alt="Analysis loader" width="48%"/>
+    <img src="screenshots/shortcut_search.png" alt="shortcut search" width="48%"/>
   </p>
 </div>
 
@@ -26,8 +22,6 @@
 VC Scout is a high-density, Harmonic-style discovery platform designed to transform thesis-driven sourcing. It allows investors to seamlessly search companies, filter by stage/sector, and instantly enrich profiles with live, AI-extracted signals scraped directly from public web data.
 
 > **Note on the "Core Test":** This application strictly adheres to the security requirement of the assignment. The `GEMINI_API_KEY` is never exposed to the client. All scraping and LLM extraction happens securely on the backend via a Vercel Serverless Function (`/api/enrich`).
-
-![App Screenshot ](screenshots/Discovery.png)
 
 ---
 
@@ -51,39 +45,41 @@ VC Scout is a high-density, Harmonic-style discovery platform designed to transf
 
 ---
 
-## 🏗️ Architecture 
+## 🏗️ Architecture
 
 ```text
-├── api/                # Vercel Serverless Functions (Node.js)
-│   └── enrich.js       # Cheerio Scraper + Gemini AI Integration
+├── api/
+│   └── enrich.js       # Vercel Serverless Function (Cheerio + Gemini AI)
 ├── src/
-│   └── assets 
+│   ├── assets/
 │   ├── components/     # Reusable UI (GlobalSearch, ErrorBoundary, Sidebar)
-│   ├── contexts/  
-│   └── hooks/      
+│   ├── contexts/       # Global State Providers
+│   ├── hooks/          # Custom Hooks (useLocalStorage)
 │   ├── pages/          # React Router Views (Discovery, Profile, Lists)
-│   └── App.css
-│   └── App.jsx
-│   └── index.css
-│   └── main.jsx
-│   └── mockData.js    # Seeded JSON dataset
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── mockData.js     # Seeded JSON dataset
 ├── vercel.json         # Route rewrites for React Router SPA
 └── vite.config.js      # Frontend build configuration
-## 💻 Local Setup
+💻 Local Setup
+Clone the repository:
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Simpush-43/VC-Intelligence-Interface](https://github.com/Simpush-43/VC-Intelligence-Interface.git)
-   cd vc-scout```
-2. **Install dependencies:**
-   ```npm install```
-3. **Configure Environment Variables:
-Create a .env.local file in the root directory and add your Google AI Studio key:**
-   ```Code snippet
-   GEMINI_API_KEY=your_google_ai_studio_key_here```
-4. **Run the Development Server:
-Because this project uses Vercel Serverless API routes, use the Vercel CLI to run the frontend and backend simultaneously:**
-```bash
+Bash
+git clone [https://github.com/Simpush-43/VC-Intelligence-Interface.git](https://github.com/Simpush-43/VC-Intelligence-Interface.git)
+cd VC-Intelligence-Interface
+Install dependencies:
+
+Bash
+npm install
+Configure Environment Variables:
+Create a .env.local file in the root directory and add your Google AI Studio key:
+
+Code snippet
+GEMINI_API_KEY=your_google_ai_studio_key_here
+Run the Development Server:
+Because this project uses Vercel Serverless API routes, use the Vercel CLI to run the frontend and backend simultaneously:
+
+Bash
 npm i -g vercel
-vercel dev```
+vercel dev
 The app will be live at http://localhost:3000.
